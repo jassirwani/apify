@@ -131,8 +131,8 @@ public class ApiSpecController {
     private Resource findResourceByKey(String key) throws IOException {
         List<Resource> resources = new ArrayList<>();
         resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.yaml")));
-        resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.yml")));
-        resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.json")));
+        //resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.yml")));
+        //resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.json")));
 
         for (Resource r : resources) {
             String filename = r.getFilename();
@@ -154,8 +154,8 @@ public class ApiSpecController {
         List<SpecInfo> infos = new ArrayList<>();
         List<Resource> resources = new ArrayList<>();
         resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.yaml")));
-        resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.yml")));
-        resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.json")));
+        //resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.yml")));
+        //resources.addAll(Arrays.asList(resolver.getResources("classpath*:**/*.json")));
 
         for (Resource r : resources) {
             if (r.getFilename() == null) continue;
